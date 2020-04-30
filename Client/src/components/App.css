@@ -1,0 +1,30 @@
+.site-layout-background {
+  background: #fff;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(211, 211, 211); 
+}
