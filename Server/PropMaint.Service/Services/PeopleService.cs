@@ -17,9 +17,9 @@ namespace PropMaint.Service.Services
             this.peopleRepository = peopleRepository;
         }
 
-        public async Task<IEnumerable<Person>> GetPeople()
+        public Task<IEnumerable<Person>> GetPeople()
         {
-            return await peopleRepository.GetPeople();
+            return peopleRepository.GetPeople();
         }
     }
 }
