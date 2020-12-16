@@ -16,14 +16,13 @@ namespace PropMaint.Data.Repositories
         {
         }
 
-        public async Task<IEnumerable<Person>> GetPeople()
+        public Task<IEnumerable<Person>> GetPeople()
         {
             string sql = "SELECT [UId], [Forename], [Surname], [DateOfBirth], [OtherNames], [PictureUri] FROM People";
 
             using (var connection = new SqlConnection(GetConnectionString()))
             {
-                var res = await connection.QueryAsync<Person>(sql);
-                return res;
+                return connection.QueryAsync<Person>(sql);
             }
         }
     }
